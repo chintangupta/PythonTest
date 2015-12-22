@@ -52,7 +52,7 @@ def step_impl(context):
     logging.debug(u'Successfully got all albums')
 
 
-@then(u'I should get a list of "{noa}" albums')
+@then('I should get a list of "{noa}" albums')
 def step_impl(context, noa=None):
     albums = context.response.json()
     assert len(albums) == int(noa)
@@ -66,7 +66,7 @@ def step_impl(context):
     logging.debug(u'Successfully got all photos')
 
 
-@then(u'I should get a list of "{noph}" photos')
+@then('I should get a list of "{noph}" photos')
 def step_impl(context, noph=None):
     photos = context.response.json()
     assert len(photos) == int(noph)
@@ -80,7 +80,7 @@ def step_impl(context):
     logging.debug(u'Successfully got all todos')
 
 
-@then(u'I should get a list of "{noto}" todos')
+@then('I should get a list of "{noto}" todos')
 def step_impl(context, noto=None):
     todos = context.response.json()
     assert len(todos) == int(noto)
@@ -94,8 +94,12 @@ def step_impl(context):
     logging.debug(u'Successfully got all users')
 
 
-@then(u'I should get a list of "{nou}" users')
+@then('I should get a list of "{nou}" users')
 def step_impl(context, nou=None):
     users = context.response.json()
     assert len(users) == int(nou)
     logging.debug(u'Response contains {} users'.format(len(users)))
+
+
+
+
